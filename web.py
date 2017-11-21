@@ -1,15 +1,15 @@
-
-from flask import Flask
-import os
-import json
 from flask import Flask,request,jsonify,Response
+import json
+from bson.json_util import loads
+from bson.json_util import dumps
 from bson import json_util
 
-def attend(message):
-    if message="text"
-        return jsonify({"status":"OK"})
-    else
-        return jsonify({"status":"error"})
+class attend():
+    def attend(message):
+        if message="text"
+            return jsonify({"status":"OK"})
+        else
+            return jsonify({"status":"error"})
 
 @app.route("/")
 def raiz():
