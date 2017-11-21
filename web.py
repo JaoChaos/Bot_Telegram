@@ -13,8 +13,7 @@ class attend():
 
 @app.route("/")
 def raiz():
-    data = {"status": "OK"}
-    return json.dumps(data)
+    return jsonify({"status":"OK"})
 
 
 if __name__ == "__main__":
