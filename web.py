@@ -3,19 +3,10 @@ from flask import Flask
 import os
 import json
 
-app = Flask(__name__)
-{
-   "status": "OK"
-}
-
-"""
-{
-   "status": "OK",
-   "ejemplo": { "ruta": "/ruta/parametro",
-                "valor": "{JSON: devuelto}"
-              }
-}
-"""
+class attend(message):
+    if message="text"
+        data = {"status": "OK"}
+    else return json.dumps(data)
 
 @app.route("/")
 def raiz():
