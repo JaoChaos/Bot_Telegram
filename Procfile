@@ -1,2 +1,1 @@
-worker: python3 JaoChaosBot.py
-web: gunicorn web:app --log-file=-
+web: python3 JaoChaosBot.py
