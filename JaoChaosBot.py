@@ -1,16 +1,21 @@
+#!/usr/bin/python3 -u
 
 import telebot
-import os
+import time
+import urllib
+import subprocess
+from telebot import types
 import funciones
 
 TOKEN= '484560229:AAFJLC5DGod2vIH9Bga1mQpMiGWB3s44vic'
 
 bot = telebot.TeleBot(TOKEN)
-lista=[]
+tiempo = time.strftime("%H horas %M minutos y %S segundos exactamente")
+
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
 	cid = message.chat.id
-	bot.send_message(cid, 'Acciones disponibles: \n1)Informacion del bot. \n2)Imprimir mensaje de bienvenida. \n3)Ver enlace GitHub. \n4) Despliega menu para rutas.')
+	bot.send_message(cid, 'Acciones disponibles: \n1)Informacion del bot. \n2)Imprimir mensaje de bienvenida. \n3)Ver enlace GitHub. \nstart) Escribe comando.')
 
 @bot.message_handler(commands=['1'])
 def atiende1(message):
@@ -30,27 +35,26 @@ def atiende3(message):
 	enlace = 'https://github.com/JaoChaos/Bot_Telegram'
 	bot.send_message(cid, enlace)
 
-@bot.message_handler(commands=['4'])
-def atiende4(message):
-	cid = message.chat.id
-	bot.send_message(cid, 'Acciones para rutas: \na) Ver rutas disponibles. \nb)Insertar nueva ruta. \nc)Eliminar ruta.')
+@bot.message_handler(commands=['start'])
+def send_photo(message):
+    bot.send_message(message.chat.id, 'Type')
 
-@bot.message_handler(commands=['a'])
-def atiende_a(message):
-	cid = message.chat.id
-	funciones.ver_rutas(lista)
+def recibe(messages):
+    for m in messages:
+        if m.content_type == "text":
+            ok = subprocess.call(m.text + ' >> archivoSalida', shell=True)
+            if ok == 0:
+                archivo = open('archivoSalida','r+')
+                archivo.write('OK')
+                show = archivo.read()
+                subprocess.call('rm archivoSalida', shell=True)
+                bot.send_message(m.chat.id,show + "ok")
 
-@bot.message_handler(commands=['b'])
-def atiende_b(message):
-	cid = message.chat.id
-	ruta=input();
-	funciones.insertar_ruta(lista,ruta)
-	bot.send_message(cid, 'Se ha insertado la ruta correctamente.')
+            else:
+                bot.send_message(m.chat.id,"Error")
 
-@bot.message_handler(commands=['c'])
-def atiende_c(message):
-	cid = message.chat.id
-	funciones.eliminar_ruta(lista,ruta)
-	bot.send_message(cid, 'Se ha eliminado correctamente la ruta.')
+bot.set_update_listener(recibe)
+
+bot.polling()
 
 bot.polling(none_stop=True) # siempre activo
