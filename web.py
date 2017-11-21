@@ -25,8 +25,8 @@ class attend():
 def raiz():
     return jsonify({"status":"OK"})
 
-app.add_resource(attend_info, '/api/attend_info')
-app.add_resource(attend_command, '/api/attend_command')
+app.add_resource(attend_info, '/app/attend_info')
+app.add_resource(attend_command, '/app/attend_command')
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
