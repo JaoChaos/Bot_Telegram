@@ -1,6 +1,11 @@
 from flask import Flask,request,jsonify,Response
 import json
 
+app = Flask(__name__)
+{
+   "status": "OK"
+}
+
 class attend():
     def attend_info(message):
         try:
@@ -16,6 +21,7 @@ class attend():
         except ValueError:
             print("Thats not a command!")
 
+@app.route("/")
 def raiz():
     return jsonify({"status":"OK"})
 
