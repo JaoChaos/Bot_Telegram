@@ -2,11 +2,14 @@
 from flask import Flask
 import os
 import json
+from flask import Flask,request,jsonify,Response
+from bson import json_util
 
 def attend(message):
     if message="text"
-        data = {"status": "OK"}
-    else return json.dumps(data)
+        return jsonify({"status":"OK"})
+    else
+        return jsonify({"status":"error"})
 
 @app.route("/")
 def raiz():
