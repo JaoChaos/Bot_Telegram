@@ -12,7 +12,6 @@ class attend():
         except ValueError:
             print("That's not an int!")
 
-
     def attend_command(message):
         try:
             isinstance(message, str)
