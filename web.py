@@ -23,7 +23,8 @@ class attend():
 
 @app.route("/")
 def raiz():
-    return jsonify({"status":"OK"})
+    data = {"status": "OK"}
+    return json.dumps(data)
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
