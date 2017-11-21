@@ -3,7 +3,7 @@ from flask import Flask
 import os
 import json
 
-class attend(message):
+def attend(message):
     if message="text"
         data = {"status": "OK"}
     else return json.dumps(data)
