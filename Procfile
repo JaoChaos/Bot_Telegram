@@ -1,1 +1,1 @@
-web: python3 JaoChaosBot.py
+web: python3 web.py
