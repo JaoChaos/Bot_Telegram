@@ -1,8 +1,5 @@
 from flask import Flask,request,jsonify,Response
 import json
-from bson.json_util import loads
-from bson.json_util import dumps
-from bson import json_util
 
 class attend():
     def attend_info(message):
