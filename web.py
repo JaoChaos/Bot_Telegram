@@ -6,10 +6,19 @@ from bson import json_util
 
 class attend():
     def attend_info(message):
-        return jsonify({"status":"OK"})
+        try:
+            val = int(message)
+            return jsonify({"status":"OK"})
+        except ValueError:
+            print("That's not an int!")
+
 
     def attend_command(message):
-        return jsonify({"status":"OK"})
+        try:
+            isinstance(message, str)
+            return jsonify({"status":"OK"})
+        except ValueError:
+            print("Thats not a command!")
 
 @app.route("/")
 def raiz():
