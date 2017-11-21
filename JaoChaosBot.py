@@ -5,7 +5,6 @@ import time
 import urllib
 import subprocess
 from telebot import types
-import funciones
 
 TOKEN= '484560229:AAFJLC5DGod2vIH9Bga1mQpMiGWB3s44vic'
 
