@@ -16,7 +16,6 @@ class attend():
         except ValueError:
             print("Thats not a command!")
 
-@app.route("/")
 def raiz():
     return jsonify({"status":"OK"})
 
