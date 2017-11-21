@@ -6,10 +6,7 @@ from bson import json_util
 
 class attend():
     def attend(message):
-        if message="text"
-            return jsonify({"status":"OK"})
-        else
-            return jsonify({"status":"error"})
+        return jsonify({"status":"OK"})
 
 @app.route("/")
 def raiz():
