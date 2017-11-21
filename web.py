@@ -6,7 +6,14 @@ app = Flask(__name__)
 {
    "status": "OK"
 }
-
+"""
+{
+   "status": "OK",
+   "ejemplo": { "ruta": "/ruta/parametro",
+                "valor": "{JSON: devuelto}"
+              }
+}
+"""
 class attend():
     def attend_info(message):
         try:
