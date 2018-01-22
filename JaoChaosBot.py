@@ -5,6 +5,7 @@ import time
 import urllib
 import subprocess
 from telebot import types
+import os
 
 TOKEN=os.environ["TOKEN_BOT"]
 
