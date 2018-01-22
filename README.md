@@ -16,4 +16,8 @@ Despliegue https://jaochaosbot.herokuapp.com/
 ## Pruebas en contenedores aislados:
 Para realizar las pruebas antes de lanzar el servicio he usado el ya conocido por todos Docker, que debido a su popularidad y a su fácil uso se ha convertido en una de las herramientas más utilizadas para ese fin.
 
-Contenedor: [Despliegue](https://hub.docker.com/r/jaochaos/bot_telegram/)
+Enlace a DockerHub: [Despliegue](https://hub.docker.com/r/jaochaos/bot_telegram/)
+
+## Despliegue en Zeit:
+
+Contenedor: https://bottelegram-rtumhgvwum.now.sh
