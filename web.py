@@ -14,6 +14,13 @@ app = Flask(__name__)
               }
 }
 """
+
+
+@app.route("/status")
+def status():
+	data = {"status": "OK"}
+return json.dumps(data)
+
 class attend():
     def attend_info(message):
         try:
