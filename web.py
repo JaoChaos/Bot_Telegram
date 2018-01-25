@@ -15,6 +15,9 @@ app = Flask(__name__)
 }
 """
 
+@app.route("/")
+def raiz():
+return render_template('base.html')
 
 @app.route("/status")
 def status():
