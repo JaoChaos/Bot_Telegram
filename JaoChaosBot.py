@@ -7,9 +7,9 @@ import subprocess
 from telebot import types
 import os
 
-TOKEN=os.environ["TOKEN_BOT"]
+#TOKEN=os.environ["TOKEN_BOT"]
 
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(AAFJLC5DGod2vIH9Bga1mQpMiGWB3s44vic)
 tiempo = time.strftime("%H horas %M minutos y %S segundos exactamente")
 
 @bot.message_handler(commands=['help', 'start'])

@@ -17,12 +17,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def raiz():
-return render_template('base.html')
+    return render_template('base.html')
 
 @app.route("/status")
 def status():
 	data = {"status": "OK"}
-return json.dumps(data)
+    return json.dumps(data)
 
 class attend():
     def attend_info(message):
