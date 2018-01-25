@@ -20,4 +20,4 @@ Enlace a [DockerHub](https://hub.docker.com/r/jaochaos/bot_telegram/) .
 
 ## Despliegue en Zeit:
 
-Contenedor: https://bottelegram-guwgjymtnw.now.sh
+Contenedor: https://bottelegram-srwqufkybp.now.sh
