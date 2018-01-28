@@ -15,5 +15,5 @@ RUN make install
 EXPOSE 80
 #CMD ./despliegue.sh
 
-CMD python web.py
-#CMD python JaoChaosBot.py
+CMD ["python", "web.py"]
+CMD ["python", "JaoChaosBot.py"]
