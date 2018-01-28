@@ -1,1 +1,2 @@
-web: python3 web.py
+web: python web.py
+worker: python JaoChaosBot.py
