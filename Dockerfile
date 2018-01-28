@@ -13,4 +13,4 @@ WORKDIR /usr/src/app/
 RUN make install
 
 EXPOSE 80
-CMD ["despliegue.sh"]
+CMD ["./despliegue.sh"]
