@@ -13,7 +13,4 @@ WORKDIR /usr/src/app/
 RUN make install
 
 EXPOSE 80
-#CMD ./despliegue.sh
-
-CMD ["python", "web.py &"]
-CMD ["python", "JaoChaosBot.py &"]
+CMD ["despliegue.sh"]
