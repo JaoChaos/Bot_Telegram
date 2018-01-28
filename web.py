@@ -22,12 +22,6 @@ def raiz(**kwargs):
         return base.read()
 
 
-# @hug.get('/')
-# def raiz(**kwargs):
-#     """Return web status."""
-#     return {'status': 'OK'}
-
-
 @hug.get('/status')
 def status():
     """Return web status."""
