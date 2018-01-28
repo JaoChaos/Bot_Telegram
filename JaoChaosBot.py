@@ -1,5 +1,4 @@
-#!/usr/bin/python3 -u
-
+#!/usr/bin/env python3
 import telebot
 import time
 import urllib
@@ -52,7 +51,8 @@ def send_photo(message):
 def recibe(messages):
     for m in messages:
         if m.content_type == "text":
-            ok = subprocess.call(m.text + ' >> archivoSalida', shell=True)
+            ok = subprocess.call(
+                'echo \"' + m.text + '\" >> archivoSalida', shell=True)
             if ok == 0:
                 archivo = open('archivoSalida', 'r+')
                 archivo.write('OK')
