@@ -1,52 +1,37 @@
-from flask import Flask, request, jsonify, Response, render_template
-import json
-import os
+#!/usr/bin/env python
+"""Interfaz web.
 
-app = Flask(__name__)
-{"status": "OK"}
-"""
 {
-   "status": "OK",
-   "ejemplo": { "ruta": "/ruta/parametro",
-                "valor": "{JSON: devuelto}"
-              }
+    "status": "OK",
+    "ejemplo": { "ruta": "/ruta/parametro",
+                 "valor": "{JSON: devuelto}"
+    }
 }
 """
+import hug
+import os
+
+DIR_BASE = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)), 'template')
 
 
-@app.route("/")
-def raiz():
-    return render_template('base.html')
+@hug.get('/', output=hug.output_format.html)
+def raiz(**kwargs):
+    """Devuelve el archivo html."""
+    with open(os.path.join(DIR_BASE, 'base.html')) as base:
+        return base.read()
 
 
-@app.route("/status")
+@hug.get('/status')
 def status():
-    data = {"status": "OK"}
-    return json.dumps(data)
+    """Return web status."""
+    return {'status': 'OK'}
 
 
-class attend():
-    def attend_info(message):
-        try:
-            val = int(message)
-            return jsonify({"status": "OK"})
-        except ValueError:
-            print("That's not an int!")
-
-    def attend_command(message):
-        try:
-            isinstance(message, str)
-            return jsonify({"status": "OK"})
-        except ValueError:
-            print("Thats not a command!")
-
-
-@app.route("/")
-def raiz():
-    data = {"status": "OK"}
-    return json.dumps(data)
+def main():
+    port = int(os.environ.get('PORT', 5000))
+    hug.API(__name__).http.serve(port)
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True, use_reloader=True)
+    main()
