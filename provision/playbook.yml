@@ -1,0 +1,16 @@
+- hosts: all
+  remote_user: vagrant
+  vars_files:
+    - var.yml
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: Install basic packages
+      apt: pkg={{ item }} update-cache=yes cache_valid_time=3600
+      with_items: "{{ system_packages }}"
+
+    - name: System update
+      command: apt update
+
+    - name: Update pip
+command: pip3 install --upgrade pip

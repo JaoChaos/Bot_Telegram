@@ -21,3 +21,15 @@ Enlace a [DockerHub](https://hub.docker.com/r/jaochaos/bot_telegram/) .
 ## Despliegue en Zeit:
 
 Contenedor: https://bottelegram-ycujievwcq.now.sh
+
+## Despliegue en una máquina virtual:
+
+Para este propósito he elegido "Azure", puesto que al ser una herramienta privativa de pago ofrece muchas posibilidades y he obtenido una licencia gratuita gracias al profesor de la asignatura.
+
+Para ello he instalado la herramienta:
+
+```sh
+$ sudo npm install -g azure-cli
+```
+
+Después de la instalación y la configuración de la máquina, 

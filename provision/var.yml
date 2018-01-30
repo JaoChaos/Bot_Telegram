@@ -1,0 +1,11 @@
+project_name: JaoChaosBot
+project_repo: https://github.com/JaoChaos/Bot_Telegram
+project_path: .
+
+system_packages:
+  - build-essential
+  - git
+  - python3
+  - python3-setuptools
+  - python3-pip
+- libpq-dev
