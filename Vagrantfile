@@ -23,10 +23,10 @@ Vagrant.configure('2') do |config|
     azure.tcp_endpoints = '80'
     azure.vm_name = "jaochaosbot"
     azure.resource_group_name= "JaoChaosBot"
-    azure.tenant_id = 'b6f2d7ef-0bce-4820-b6e8-fee39045f175'
-    azure.client_id = 'e5fec0f1-01c6-4b26-9b35-a5b22a769329'
-    azure.client_secret = 'fFD8TjM3ETrS/s51rJagh77IWcWhTaQnw7Z1oDOzLTg='
-    azure.subscription_id = '34352f6b-1f92-464a-94c9-88d482cce75a'
+    azure.tenant_id = ENV["AZURE_TENANT_ID"]
+    azure.client_id = ENV["AZURE_CLIENT_ID"]
+    azure.client_secret = ENV["AZURE_CLIENT_SECRET"]
+    azure.subscription_id = ENV["AZURE_SUBSCRIPTION_ID"]
 
   end
 

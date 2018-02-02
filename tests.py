@@ -7,4 +7,8 @@ class Test(unittest.TestCase):
         return True
 
     def test_comando(self):
-        return True
+        cid = message.chat.id
+        if cid.content_type == "text":
+            return True
+        else:
+            return False
