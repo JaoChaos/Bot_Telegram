@@ -35,8 +35,6 @@ Vagrant.configure('2') do |config|
     ansible.become = true
     ansible.playbook = "./provision/playbook.yml"
     ansible.verbose = "-vvvv"
-
-    ansible.host_key_checking = false
-  end
-
-end
+    ansible.groups = {
+      "app" => ["104.42.15.162"]
+    }
