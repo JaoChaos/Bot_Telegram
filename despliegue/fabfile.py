@@ -14,8 +14,8 @@ PURPOSE. See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>
 """
-from fabric.api import cd, run, sudo
-
+from fabric.api import cd, run, sudo, env, shell_env
+import os
 
 def RemoveApp():
     """Delete the app."""
@@ -23,13 +23,12 @@ def RemoveApp():
 
 
 def InstallApp():
-    """Performa clean instllation of the app."""
+    """Performs clean installation of the app."""
     RemoveApp()
     # Download the repository
     run('git clone https://github.com/JaoChaos/Bot_Telegram')
 
-    # Install the app requirements
-    run('cd Bot_Telegram/ && pip install -r requirements.txt')
+
 
 
 def StartApp():

@@ -22,7 +22,7 @@ Vagrant.configure('2') do |config|
     azure.location = 'southcentralus'
     azure.tcp_endpoints = '80'
     azure.vm_name = "jaochaosbot"
-    azure.resource_group_name= "jaochaosbot"
+    azure.resource_group_name= "JaoChaosBot"
     azure.tenant_id = ENV["AZURE_TENANT_ID"]
     azure.client_id = ENV["AZURE_CLIENT_ID"]
     azure.client_secret = ENV["AZURE_CLIENT_SECRET"]
