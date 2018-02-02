@@ -36,11 +36,11 @@ $ sudo npm install -g azure-cli
 
 Después de la instalación y la [configuración](https://unindented.org/articles/provision-azure-boxes-with-vagrant/) de la máquina, instalamos la herramienta "Ansible" para aprovisionar nuestra máquina y creamos los ficheros necesarios para que funcione.
 
-Después de ello, solo nos queda crear el [fichero que configura Vagrant](https://github.com/JaoChaos/Bot_Telegram/blob/master/Vagrantfile) y crear el fichero de despliegue con la herramienta "fabric" : [Fabfile.py](https://github.com/JaoChaos/Bot_Telegram/blob/master/depliegue/fabflie.py).
+Después de ello, solo nos queda crear el [fichero que configura Vagrant](https://github.com/JaoChaos/Bot_Telegram/blob/master/Vagrantfile) y crear el fichero de despliegue con la herramienta "fabric" : [Fabfile.py](https://github.com/JaoChaos/Bot_Telegram/blob/master/despliegue/fabfile.py).
 
 Para acabar, subimos la máquina a la nube y comprobamos que todo funciona correctamente.
 En mi caso, he creado un [archivo](https://github.com/JaoChaos/Bot_Telegram/blob/master/scripts/deploying.sh) para desplegar automáticamente la máquina.
 
 ## Despliegue final con Vagrant, ansible y fabric en la cloud de Azure:
 
-Despliegue final: jaochaosbot.southcentralus.cloudapp.azure.com/status
+Despliegue final: jaochaosbot.southcentralus.cloudapp.azure.com
