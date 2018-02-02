@@ -36,4 +36,4 @@ Después de la instalación y la configuración de la máquina,
 
 ## Despliegue final con Vagrant, ansible y fabric en la cloud de Azure:
 
-Despliegue final:vagrant@jaochaosbot.southcentralus.cloudapp.azure.com
+Despliegue final:jaochaosbot.southcentralus.cloudapp.azure.com
