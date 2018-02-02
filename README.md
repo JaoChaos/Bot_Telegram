@@ -32,4 +32,8 @@ Para ello he instalado la herramienta:
 $ sudo npm install -g azure-cli
 ```
 
-Después de la instalación y la configuración de la máquina, 
+Después de la instalación y la configuración de la máquina,
+
+## Despliegue final con Vagrant, ansible y fabric en la cloud de Azure:
+
+Despliegue final:vagrant@jaochaosbot.southcentralus.cloudapp.azure.com

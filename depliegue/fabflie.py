@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 """
 Deployment of the app.
 Copyright 2017, Juan Anaya Ortiz (juan.anaya.ortiz@gmail.com)
@@ -34,4 +35,4 @@ def InstallApp():
 def StartApp():
     """Run the app."""
     with cd('Bot_Telegram'):
-        sudo('./despliegue.sh')
+        sudo('bash /scripts/despliegue.sh')
