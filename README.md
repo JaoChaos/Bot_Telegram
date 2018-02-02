@@ -43,4 +43,4 @@ En mi caso, he creado un [archivo](https://github.com/JaoChaos/Bot_Telegram/blob
 
 ## Despliegue final con Vagrant, ansible y fabric en la cloud de Azure:
 
-Despliegue final:jaochaosbot.southcentralus.cloudapp.azure.com
+Despliegue final: jaochaosbot.southcentralus.cloudapp.azure.com
