@@ -23,10 +23,10 @@ Vagrant.configure('2') do |config|
     azure.tcp_endpoints = '80'
     azure.vm_name = "jaochaosbot"
     azure.resource_group_name= "JaoChaosBot"
-    azure.tenant_id = ENV["AZURE_TENANT_ID"]
-    azure.client_id = ENV["AZURE_CLIENT_ID"]
-    azure.client_secret = ENV["AZURE_CLIENT_SECRET"]
-    azure.subscription_id = ENV["AZURE_SUBSCRIPTION_ID"]
+    azure.tenant_id = 'b6f2d7ef-0bce-4820-b6e8-fee39045f175'
+    azure.client_id = '0f7e34be-21f9-4786-aa70-089d1758a25c'
+    azure.client_secret = '4qpjKyOumaasy438Gq6nKp6JzVqE2DeIphvGO+cfXHc='
+    azure.subscription_id = '34352f6b-1f92-464a-94c9-88d482cce75a'
 
   end
 
@@ -35,7 +35,7 @@ Vagrant.configure('2') do |config|
     ansible.become = true
     ansible.playbook = "./provision/playbook.yml"
     ansible.verbose = "-vvvv"
-    
+
     ansible.host_key_checking = false
   end
 

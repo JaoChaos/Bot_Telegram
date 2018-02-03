@@ -33,4 +33,4 @@ def InstallApp():
 def StartApp():
     """Run the app."""
     with cd('Bot_Telegram'):
-        sudo('bash ./scripts/despliegue.sh')
+        sudo('sudo python3 web.py')
