@@ -29,8 +29,7 @@ def status():
 
 
 def main():
-    linea = "Status : OK"
-    return linea
+    return {'status': 'OK'}
 
 
 
