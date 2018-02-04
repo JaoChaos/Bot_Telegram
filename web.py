@@ -29,7 +29,7 @@ def status():
 
 
 def main():
-    port = str(os.environ.get('PORT', 80))
+    port = str(os.environ.get('PORT', 8000))
     hug.API(__name__).http.serve(port)
 
 
