@@ -3,7 +3,7 @@
 # Start the first process
 pip3 install -r requirements.txt
 
-python ../web.py &
+python web.py &
 status=$?
 if [ $status -ne 0 ]; then
   echo "Failed to start my_first_process: $status"
@@ -13,7 +13,7 @@ else
 fi
 
 # Start the second process
-python ../JaoChaosBot.py &
+python JaoChaosBot.py &
 
 status=$?
 if [ $status -ne 0 ]; then

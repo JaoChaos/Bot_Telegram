@@ -13,4 +13,4 @@
       command: apt update
 
     - name: Update pip
-command: pip3 install --upgrade pip
+      command: pip3 install --upgrade pip
