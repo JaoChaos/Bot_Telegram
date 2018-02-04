@@ -21,8 +21,8 @@ Vagrant.configure('2') do |config|
     azure.vm_size = 'Basic_A0'
     azure.location = 'southcentralus'
     azure.tcp_endpoints = '80'
-    azure.vm_name = "jaochaosbot"
-    azure.resource_group_name= "JaoChaosBot"
+    azure.vm_name = "jaochaosremote"
+    azure.resource_group_name= "JaoChaosRemote"
     azure.tenant_id = 'b6f2d7ef-0bce-4820-b6e8-fee39045f175'
     azure.client_id = 'cea65225-5f06-4912-b988-a99f1cef113e'
     azure.client_secret = 'ZvkstUBdcMdznBoF/0ksi6Qtu+gQY5JK/kTFjvWJjgg='

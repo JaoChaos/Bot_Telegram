@@ -2,5 +2,5 @@
 
 vagrantup --provider=azure
 
-fab -f ./despliegue/fabfile.py -H vagrant@jaochaosbot.southcentralus.cloudapp.azure.com InstallApp
-fab -f ./despliegue/fabfile.py -H vagrant@jaochaosbot.southcentralus.cloudapp.azure.com StartApp
+fab -f ./despliegue/fabfile.py -H vagrant@jaochaosremote.southcentralus.cloudapp.azure.com InstallApp
+fab -f ./despliegue/fabfile.py -H vagrant@jaochaosremote.southcentralus.cloudapp.azure.com StartApp
