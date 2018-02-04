@@ -6,7 +6,7 @@ import subprocess
 from telebot import types
 import os
 
-TOKEN = os.environ["TOKEN_BOT"]
+TOKEN = '484560229:AAFJLC5DGod2vIH9Bga1mQpMiGWB3s44vic'
 
 bot = telebot.TeleBot(TOKEN)
 tiempo = time.strftime("%H horas %M minutos y %S segundos exactamente")
