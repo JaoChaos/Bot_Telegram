@@ -29,7 +29,7 @@ def status():
 
 
 def main():
-    hug.API(__name__).http.serve(80)
+    hug.API(__name__).http.serve(port=80)
 
 
 if __name__ == "__main__":
