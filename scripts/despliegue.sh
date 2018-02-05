@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Start the first process
-pip3 install -r requirements.txt
 
 python3 web.py &
 status=$?
