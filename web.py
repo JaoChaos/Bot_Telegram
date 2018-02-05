@@ -29,8 +29,7 @@ def status():
 
 
 def main():
-    port = str(os.environ.get('PORT', 80))
-    hug.API(__name__).http.serve(port)
+    hug.API(__name__).http.serve(80)
 
 
 if __name__ == "__main__":
