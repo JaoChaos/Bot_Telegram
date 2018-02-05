@@ -27,7 +27,7 @@ def InstallApp():
     # Download the repository
     run('git clone https://github.com/JaoChaos/Bot_Telegram.git')
     # Install requirements
-    run('cd Bot_Telegram/ && pip3 install --user -r requirementes')
+    run('cd Bot_Telegram/ && pip3 install --user -r requirements.txt')
 
 
 
